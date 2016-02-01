@@ -7,6 +7,7 @@ EAPI=5
 MY_P="gperftools-${PV}"
 
 inherit toolchain-funcs eutils flag-o-matic autotools-utils
+inherit multilib
 
 DESCRIPTION="Fast, multi-threaded malloc() and nifty performance analysis tools"
 HOMEPAGE="https://github.com/gperftools/gperftools"
