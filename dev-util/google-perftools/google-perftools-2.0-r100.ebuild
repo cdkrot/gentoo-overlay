@@ -7,7 +7,7 @@ EAPI=5
 MY_P="gperftools-${PV}"
 
 inherit toolchain-funcs eutils flag-o-matic autotools-utils
-inherit multilib autotools-multilib
+inherit autotools-multilib
 
 DESCRIPTION="Fast, multi-threaded malloc() and nifty performance analysis tools"
 HOMEPAGE="https://github.com/gperftools/gperftools"
@@ -45,9 +45,10 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${MY_P}+glibc-2.16.patch"
 	epatch "${FILESDIR}/${MY_P}-32bit-barrier.patch"
+	autotools-multilib_src_prepare
 }
 
-src_configure() {
+multilib_src_configure() {
 	use largepages && append-cppflags -DTCMALLOC_LARGE_PAGES
 	append-flags -fno-strict-aliasing -fno-omit-frame-pointer
 
