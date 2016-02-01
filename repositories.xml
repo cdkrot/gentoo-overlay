@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>cdkrot</name>
+    <description>cdkrot sandbox gentoo overlay</description>
+    <homepage>https://github.com/cdkrot/gentoo-overlay</homepage>
+    <owner>
+      <email>cdkrot@yandex.ru</email>
+    </owner>
+    <source type="git">https://github.com/cdkrot/gentoo-overlay.git</source>
+  </repo>
+</repositories>
